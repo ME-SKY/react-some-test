@@ -1,0 +1,131 @@
+.ui-button {
+  background: linear-gradient(180deg, #7C45F8 0%, #746FFA 79.33%, #6D90FB 100%);
+  border-radius: 8px;
+  width: 100%;
+  height: inherit;
+
+  &.standard-unbordered {
+    background: #F8F8F9 !important;
+    border: none;
+
+    .text {
+      z-index: 2;
+      opacity: 1;
+    }
+
+  }
+
+  &.standard {
+    .text {
+      opacity: 1;
+    }
+  }
+
+  &.outline {
+    &::before {
+      position: absolute;
+      width: calc(100% - 3px);
+      border-radius: 7px;
+      height: calc(100% - 3px);
+      top: 1.5px;
+      left: 1.5px;
+      display: block;
+      content: "";
+      background: white;
+    }
+
+    .text {
+
+      &.gradient-text {
+        background: linear-gradient(90deg, #7C45F8 0%, #746FFA 49.33%, #78D4FC 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        opacity: 1;
+      }
+
+      position: absolute;
+    }
+  }
+
+  &:disabled {
+    .text {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .text {
+    font-family: 'Jost', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+
+  .ui-button {
+
+    .text {
+      font-family: 'Jost', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .ui-button {
+
+    &.outline {
+
+      &::before {
+        position: absolute;
+
+        width: calc(100% - 3px);
+        border-radius: 11px;
+        height: calc(100% - 3px);
+        top: 1.5px;
+        left: 1.5px;
+        display: block;
+        content: "";
+
+        background: white;
+      }
+
+      .text {
+
+        &.gradient-text {
+          background: linear-gradient(90deg, #7C45F8 0%, #746FFA 49.33%, #78D4FC 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          opacity: 1;
+        }
+
+        position: absolute;
+      }
+    }
+
+    border-radius: 12px !important;
+
+    .text {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}
+
+

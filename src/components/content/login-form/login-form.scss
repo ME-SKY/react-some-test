@@ -1,0 +1,75 @@
+.login-form{
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  gap: 50px;
+  margin-top: 80px;
+}
+
+.welcome-text{
+  font-family: 'Jost', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  color: #0E0C20;
+}
+
+.form{
+  min-height: 200px;
+  min-width: 320px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 0.9em;
+
+  .field{
+    height: 56px;
+    width: 320px;
+
+    button{
+      width: 150px;
+    }
+  }
+}
+
+.field{
+  &.checkbox-field{
+    position: relative;
+    left: -5px;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px){
+  .form{
+    .field{
+      width: 100%;
+    }
+  }
+
+  .welcome-text{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .welcome-text{
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 96px;
+  }
+
+  .form{
+    .field{
+      width: 420px;
+
+      button{
+        width: 200px;
+        height: 80px;
+      }
+    }
+  }
+}

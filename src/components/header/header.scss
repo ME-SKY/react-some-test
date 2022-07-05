@@ -1,0 +1,52 @@
+.header{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Jost', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #7338F6;
+}
+
+.action-button {
+  min-width: 170px;
+  height: 56px
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px){
+  .logo{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .action-button{
+    min-width: 151px;
+    width: 151px;
+    height: 48px;
+  }
+}
+
+@media only screen and (min-width: 1441px){
+  .logo{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  .action-button{
+    button{
+      width: 221px;
+      height: 72px;
+    }
+  }
+}

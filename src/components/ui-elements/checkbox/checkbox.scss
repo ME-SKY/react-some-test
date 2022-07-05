@@ -1,0 +1,77 @@
+.checkbox {
+  display: grid;
+  grid-template: 1fr / 1fr;
+
+  width: 38px;
+  height: 38px;
+}
+
+.checkmark-background {
+  border-radius: 4px;
+  align-self: center;
+  justify-self: center;
+  background: linear-gradient(180deg, #7C45F8 0%, #746FFA 59.33%, #6D90FB 92%);
+  width: 20px;
+  height: 20px;
+  color: #7338F6;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+
+  span {
+    display: block;
+    position: relative;
+    top: 1.5px;
+    left: 1.5px;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+
+    &::before {
+      position: relative;
+      display: block;
+      content: "";
+      width: 100%;
+      background: #ffffff;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 3px;
+    }
+  }
+}
+
+.ui-checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 4%;
+  height: 100%;
+}
+
+.label {
+  font-family: 'Jost', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 32px;
+}
+
+//@media only screen and (max-width: 900px) and (min-width: 0px) {
+//  .ui-checkbox {
+//
+//    svg {
+//    }
+//  }
+//}
+
+@media only screen and (min-width: 1500px) {
+  .checkmark-background {
+  }
+
+  .label {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+

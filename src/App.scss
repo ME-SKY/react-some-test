@@ -1,0 +1,34 @@
+.App {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 5%;
+}
+
+header{
+  flex: 1 1 15%;
+  margin-bottom: 20px;
+}
+
+.footer{
+  flex: 1 1 20%;
+}
+
+.content{
+  flex: 1 1 80%;
+}
+
+
+@media only screen and (min-width: 2732px){
+  .App{
+    width: 2132px;
+    margin: auto;
+    padding: 0;
+  }
+  header {
+    max-width: 2132px
+  }
+
+}
